@@ -22,7 +22,9 @@
           <div class="w-10 align-middle flex justify-center items-center">
             <hr class="bg-white w-full">
           </div>
-          <button type="submit" class="flex-none rounded-md bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Sign In</button>
+          <a href="{{url_for('login')}}">
+            <button type="submit" class="flex-none rounded-md bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Sign In</button>
+          </a>
         </div>
       </div>
       <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
@@ -191,4 +193,5 @@
     </div>
   </div>
 </div>
+<div>{{user.username}} test</div>
 {% endblock body %}

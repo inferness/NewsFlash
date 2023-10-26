@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import Integer, String
@@ -13,7 +13,7 @@ class Base(DeclarativeBase):
 db = SQLAlchemy(model_class=Base)
 # create the app
 app = Flask(__name__)
-# configure the SQLite database, relative to the app instance folder
+# configure the SQLite database
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
 app.config['SECRET_KEY'] = "secretkey"
 # initialize the app with the extension
@@ -32,12 +32,15 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Submit')
 
 # Register the Blueprint with your app
+LoggedInUser = User()
 
 # Routes
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("home.html")
+    logged_in_user = session.get('LoggedInUser', None)
+    print(logged_in_user)
+    return render_template("home.html", user=logged_in_user)
 
 @app.route("/library")
 def library():
@@ -49,17 +52,29 @@ def team():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    global LoggedInUser
+    print(LoggedInUser)
     form=LoginForm()
     if form.validate_on_submit():
-        print("login")
         user = User.query.filter_by(username=form.username.data).first()
         if(user):
             if(user.password == form.password.data):
+                user_dict = {
+                    "id": user.id,
+                    "username": user.username,
+                    "email": user.email,
+                }
+                session['LoggedInUser'] = user_dict
                 return redirect(url_for('home'))
             else:
                 return redirect(url_for('login'), form=form)
 
     return render_template("login.html", form=form)
+
+@app.route("/logout", methods=["GET"])
+def logout():
+    session.clear()
+    return redirect(url_for("login"))
 
 @app.route("/articles/<id>")
 def articles(id):
