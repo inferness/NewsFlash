@@ -66,8 +66,8 @@ def login():
                 }
                 session['LoggedInUser'] = user_dict
                 return redirect(url_for('home'))
-            else:
-                return redirect(url_for('login'), form=form)
+        else:
+            return redirect(url_for('login'), form=form)
 
     return render_template("login.html", form=form)
 
@@ -79,7 +79,8 @@ def logout():
 @app.route("/articles/<id>")
 def articles(id):
     # Now you can use the article_id in your code
-    return render_template("/articles/article" + id + ".html")
+    logged_in_user = session.get('LoggedInUser', None)
+    return render_template("/articles/article" + id + ".html", user=logged_in_user)
 
 if __name__ == "__main__":
     with app.app_context():
