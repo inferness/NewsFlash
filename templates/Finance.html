@@ -5,44 +5,27 @@
 {% endblock head %}
 
 {% block body %}
-
 <div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-36">
   <div class="mx-auto max-w-7xl px-6 lg:px-12">
     <div class="mx-auto grid max-w-full grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
       <div class="max-w-xl lg:max-w-lg">
-        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          {% if user.id %}
-            Welcome! {{user.username}}
-          {% else %}
-            Subscribe to our newsletter.
-          {% endif %}
-        </h2>
-        <p class="mt-4 text-lg leading-8 text-gray-300">
-          {% if user.id %}
-            Explore a wide range of curated News about Finance, Techonology, and politics
-          {% else %}
-            Sign in to an account to help us personalize the best news for your daily read
-          {% endif %}
-        </p>
-        {% if not user.id %}
-          <div class="mt-6 flex max-w-md gap-x-4">
-            <a href="{{url_for('register')}}">
-              <button type="submit" class="flex-none rounded-md bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Register</button>
-            </a>
-            <div class="w-10 align-middle flex justify-center items-center">
-              <hr class="bg-white w-full">
-            </div>
-            <div class="align-middle flex justify-center items-center">
-              Or
-            </div>
-            <div class="w-10 align-middle flex justify-center items-center">
-              <hr class="bg-white w-full">
-            </div>
-            <a href="{{url_for('login')}}">
-              <button type="submit" class="flex-none rounded-md bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Sign In</button>
-            </a>
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Subscribe to our newsletter.</h2>
+        <p class="mt-4 text-lg leading-8 text-gray-300">Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt dolore.</p>
+        <div class="mt-6 flex max-w-md gap-x-4">
+          <button type="submit" class="flex-none rounded-md bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Register</button>
+          <div class="w-10 align-middle flex justify-center items-center">
+            <hr class="bg-white w-full">
           </div>
-        {% endif %}
+          <div class="align-middle flex justify-center items-center">
+            Or
+          </div>
+          <div class="w-10 align-middle flex justify-center items-center">
+            <hr class="bg-white w-full">
+          </div>
+          <a href="{{url_for('login')}}">
+            <button type="submit" class="flex-none rounded-md bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Sign In</button>
+          </a>
+        </div>
       </div>
       <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
         <div class="flex flex-col items-start">
@@ -50,9 +33,9 @@
             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
             </svg>
-            <dt class="font-semibold text-white">Daily articles</dt>
+            <dt class="font-semibold text-white">Weekly articles</dt>
           </div>  
-          <dd class="mt-2 leading-7 text-gray-400">Explore a daily personalized selction of news that fits best for you</dd>
+          <dd class="mt-2 leading-7 text-gray-400">Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.</dd>
         </div>
         <div class="flex flex-col items-start">
           <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10 flex gap-4">
@@ -61,7 +44,7 @@
             </svg>
             <dt class="font-semibold text-white">No spam</dt>
           </div>
-          <dd class="mt-2 leading-7 text-gray-400">We will only contact you thorugh your emails to inform you about special events</dd>
+          <dd class="mt-2 leading-7 text-gray-400">Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.</dd>
         </div>
       </dl>
     </div>
@@ -110,47 +93,8 @@
   </div>
   <div class="mt-9 mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto lg:mx-0 text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Quick Read</h2>
-      <p class="mt-2 text-lg leading-8 text-gray-500">Discover what new things happened in the past few days</p>
-    </div>
-    <div class="mx-auto mt-10 grid grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:grid-cols-3">
-      <div class="flex lg:max-w-xl lg:flex-col items-start justify-between bg-gray-800 rounded-lg overflow-hidden">
-        <!-- <img src="../static/images/DeskSample.jpg" alt="" class="h-auto lg:w-full md:w-[25rem] hidden md:block" href="{{url_for('articles', id=1)}}"> -->
-        <img src="../static/images/DeskSample.jpg" alt="" class="h-auto lg:w-full md:w-[25rem] hidden md:block">          
-        <article class="p-3">
-          <div class="flex items-center gap-x-4 text-xs">
-            <time datetime="2020-03-16" class="text-gray-500">Nov 17, 2023</time>
-            <a href="" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Finance</a>
-          </div>
-          <div class="group relative">
-            <h3 class="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-gray-500">
-              <a href="{{url_for('articles', id=1)}}">
-                <span class="absolute inset-0"></span>
-                Boost your conversion rate
-              </a>
-            </h3>
-            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-500">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
-          </div>
-          <div class="relative mt-8 flex items-center gap-x-4">
-            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50">
-            <div class="text-sm leading-6">
-              <p class="font-semibold text-white">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Michael Foster
-                </a>
-              </p>
-              <p class="text-gray-500">Co-Founder / CTO</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-  <div class="mt-9 mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto lg:mx-0 text-center">
       <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest News</h2>
-      <p class="mt-2 text-lg leading-8 text-gray-500">Explore what recently happened around you</p>
+      <p class="mt-2 text-lg leading-8 text-gray-500">Discover what new things happened in the past few days</p>
     </div>
     <div class="mx-auto mt-10 grid grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:grid-cols-3">
       <div class="flex lg:max-w-xl lg:flex-col items-start justify-between bg-gray-800 rounded-lg overflow-hidden">
