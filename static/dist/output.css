@@ -2059,6 +2059,10 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
+.max-h-\[256px\] {
+  max-height: 256px;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -2099,6 +2103,10 @@ input:checked + .toggle-bg {
   width: 16rem;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
 .w-\[30rem\] {
   width: 30rem;
 }
@@ -2109,14 +2117,6 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
-}
-
-.w-3 {
-  width: 0.75rem;
-}
-
-.w-9 {
-  width: 2.25rem;
 }
 
 .max-w-2xl {
@@ -2839,6 +2839,11 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(26 86 219 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3457,6 +3462,11 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-blue-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(26 86 219 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -3922,6 +3932,10 @@ input:checked + .toggle-bg {
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:h-\[296px\] {
+    height: 296px;
   }
 
   .lg\:w-1\/2 {

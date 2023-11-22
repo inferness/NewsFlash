@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block head %}
+    <Title>Article</Title>
+{% endblock head %}
+{% block body %}
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-gray-900 antialiased">
+    <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
+        <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+            <header class="mb-4 lg:mb-6 not-format">
+                <address class="flex items-center mb-6 not-italic">
+                    <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                        <img class="mr-4 w-16 h-16 rounded-full" src="../static/images/avatar.svg" alt="Jese Leos">
+                        <div>
+                            <a href="#" rel="author" class="text-xl font-bold text-white">Dwight Fanuel</a>
+                            <p class="text-base text-gray-500 dark:text-gray-400">Writer / Journalist</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400"><time pubdate datetime="2022-02-08" title="February 8th, 2022">Nov 23, 2023</time></p>
+                        </div>
+                    </div>
+                </address>
+                <h1 class="text-3xl font-extrabold leading-tight lg:text-4xl text-white">Presidential Candidates and Their Political Gimmicks</h1>
+                <p class="mb-4">5 minute read</p>
+            </header>
+            <p class="lead">Entering the political year, presidential and vice-presidential candidates are continually striving to increase their electability through various strategies, 
+                one of which involves political gimmicks.</p>
+            <figure><img src="../static/images/politics.png" alt="">
+                <figcaption>Digital art by Anonymous</figcaption>
+            </figure>
+            <p>Presidential candidate number two, Prabowo Subianto, is synonymous with the "gemoy" and "joget gemoy" gimmicks, 
+                where in several moments he was caught on camera dancing, which was then amusingly responded to by his supporters.</p>
+            <p>Meanwhile, the third-numbered candidate, Ganjar-Mahfud, has adopted the "salam tiga jari" (three-finger salute), 
+                which signifies "three fingers, three promises: obedience to God, compliance with the law, and loyalty to the people."</p>
+            <p>Not to be outdone, the first-numbered candidate, Anies-Muhaimin, has also implemented an anti-criticism gimmick, 
+                where they invite comedians or content creators to criticize them, showcasing their "anti-criticism" character.</p>
+            <p>Dedi Kurnia Syah, the Executive Director of Indonesia Political Opinion (IPO), believes that the political gimmicks employed by each presidential and vice-presidential 
+                candidate effectively boost votes, especially among the younger generation. He states that Jokowi is proof of the success of political gimmicks.</p>
+            <h4 class="text-white">Read more from our partners:</h4>
+            <ol>
+                <li><a href="#">Gimik politik 2024 joget gemoy ala Prabowo hingga salam 3 jari Ganjar</a> - CNN Indonesia</li>
+            </ol>
+        </article>
+    </div>
+</main>
+  
+  <aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-800">
+    <div class="px-4 mx-auto max-w-screen-xl">
+        <h2 class="mb-8 text-2xl font-bold text-white">Related articles</h2>
+        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mb-5 rounded-lg" alt="Image 1">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-white">
+                    <a href="#">Our first office</a>
+                </h2>
+                <p class="mb-4 text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 2 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mb-5 rounded-lg" alt="Image 1">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-white">
+                    <a href="#">Our first office</a>
+                </h2>
+                <p class="mb-4 text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 2 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mb-5 rounded-lg" alt="Image 1">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-white">
+                    <a href="#">Our first office</a>
+                </h2>
+                <p class="mb-4 text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 2 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mb-5 rounded-lg" alt="Image 1">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-white">
+                    <a href="#">Our first office</a>
+                </h2>
+                <p class="mb-4 text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 2 minutes
+                </a>
+            </article>
+        </div>
+    </div>
+  </aside>
+{% endblock body %}
+
