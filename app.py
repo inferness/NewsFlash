@@ -49,36 +49,32 @@ LoggedInUser = User()
 @app.route("/home")
 def home():
     logged_in_user = session.get('LoggedInUser', None)
-    print(logged_in_user)
     return render_template("home.html", user=logged_in_user)
 
 @app.route("/finance")
 def finance():
     logged_in_user = session.get('LoggedInUser', None)
-    print(logged_in_user)
     return render_template("finance.html", user=logged_in_user)
 
 @app.route("/technology")
 def tech():
     logged_in_user = session.get('LoggedInUser', None)
-    print(logged_in_user)
     return render_template("tech.html", user=logged_in_user)
 
 @app.route("/politics")
 def politics():
     logged_in_user = session.get('LoggedInUser', None)
-    print(logged_in_user)
     return render_template("politics.html", user=logged_in_user)
 
 @app.route("/entertainment")
 def entertainment():
     logged_in_user = session.get('LoggedInUser', None)
-    print(logged_in_user)
     return render_template("entertainment.html", user=logged_in_user)
 
-@app.route("/team")
-def team():
-    return render_template("team.html")
+@app.route("/profile")
+def profile():
+    logged_in_user = session.get('LoggedInUser', None)
+    return render_template("profile.html", user=logged_in_user)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
