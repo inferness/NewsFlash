@@ -20,6 +20,41 @@
                 <h1 class="text-3xl font-extrabold leading-tight lg:text-4xl text-white">Youtube's War Against Adblockers</h1>
                 <p class="mb-4">5 minute read</p>
             </header>
+            <div class="bg-gray-800 p-3 rounded-md">
+                <div class="flex items-center w-full">
+                    <div class="w-full">
+                        <div class="flex items-center justify-center mx-auto mb-1">                        
+                            <button data-tooltip-target="tooltip-pause" type="button" class="inline-flex items-center justify-center p-2.5 mx-2 font-medium bg-blue-600 rounded-full hover:bg-blue-700 group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                                <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
+                                    <path d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z"/>
+                                </svg>                                  
+                                <span class="sr-only">Pause video</span>
+                            </button>
+                            <div id="tooltip-pause" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                Pause video
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                            <button data-tooltip-target="tooltip-restart" type="button" class="p-2.5 group rounded-full hover:bg-gray-100 me-1 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-600 dark:hover:bg-gray-600">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 1v5h-5M2 19v-5h5m10-4a8 8 0 0 1-14.947 3.97M1 10a8 8 0 0 1 14.947-3.97"/>
+                                </svg>
+                                <span class="sr-only">Restart video</span>
+                            </button>
+                            <div id="tooltip-restart" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                Restart video
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">0:00</span>
+                            <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-800">
+                                <div class="bg-blue-600 h-1.5 rounded-full" style="width: 0%"></div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">5:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <p class="lead">Following YouTube’s global crackdown on ad blockers, users are resorting to more extreme measures to evade their new policy</p>
             <figure><img src="../static/images/Youtube.jpg" alt="">
                 <figcaption>Digital art by Anonymous</figcaption>
